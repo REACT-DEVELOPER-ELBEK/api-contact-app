@@ -17,4 +17,15 @@
             gap: 20px;
         }
     }
+    .contact__list{
+        display: flex;
+        gap: 200px;
+        .contact__item{
+            background: dodgerblue;
+            padding: 40px;
+            border-radius: 50px;
+            display: flex;
+            gap: 30px;
+        }
+    }
 }

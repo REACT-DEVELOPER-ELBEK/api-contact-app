@@ -1,4 +1,22 @@
 {
-    "users":[
-    ]
+  "users": [
+    {
+      "post": {
+        "phoneNumber": "(90) 818-14-77"
+      },
+      "id": 1
+    },
+    {
+      "post": {
+        "phoneNumber": "(90) 818-14-78"
+      },
+      "id": 2
+    },
+    {
+      "post": {
+        "phoneNumber": "90 818-14-77"
+      },
+      "id": 3
+    }
+  ]
 }
