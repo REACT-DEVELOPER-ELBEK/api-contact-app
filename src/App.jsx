@@ -13,20 +13,16 @@ function App() {
   //     .then((response) => setPost(response.data))
   //     .catch((err) => console.log(err));
   // }, []);
-  const [post, setPost] = useState({
-    firstName: "",
-    lasName: "",
-    phoneNumber: ""
-  });
+  const [post, setPost] = useState({});
   function getValue(event) {
     event.preventDefault();
     axios
-      .post("http://localhost:3000/users", { post })
-      .then((response) => setPost(response.data))
+      .post("http://localhost:3000/users", {post})
+      .then((response) => console.log(response.data))
       .catch((err) => console.log(err));
   }
   function inputValue(event){
-    setPost({[event.target.name]: event.target.value });
+    setPost({...post, [event.target.name]: event.target.value });
   };
   return (
     <div className="container">
@@ -73,11 +69,9 @@ function App() {
       </form>
       <div className="contact__list">
         <div className="contact__item">
-          {
-            post.map((item, index)=>{
-              return (<p key={index}>{item.post.firstName }</p>)
-            })
-          }
+          {/* {
+            <p>{post.map(e=>e.firstName)}</p>
+          } */}
         </div>
       </div>
     </div>
